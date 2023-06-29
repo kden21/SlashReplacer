@@ -1,0 +1,24 @@
+﻿<Window x:Class="slashChanger23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:slashChanger23"
+        xmlns:taskbarNotification="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="SlashChanger" Height="150" Width="250">
+    
+    <Grid>
+        <taskbarNotification:TaskbarIcon Visibility="Visible" ToolTipText="SlashChanger" IconSource="src/icon.ico">
+            <taskbarNotification:TaskbarIcon.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Header="Выход" Click="Exit_Click">
+                        <MenuItem.Icon>
+                            <Image Source="src/exit.ico"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </taskbarNotification:TaskbarIcon.ContextMenu>
+        </taskbarNotification:TaskbarIcon>
+    </Grid>
+</Window>
